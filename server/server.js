@@ -27,8 +27,10 @@ app.get("/", (req, res) => {
 
 // Define API routes (we will add these later)
 app.use("/api/auth", require("./routes/auth"));
-app.use("/api/routes", require("./routes/routes.js"));
+// app.use("/api/routes", require("./routes/routes.js"));
 app.use("/api/admin", require("./routes/admin.js"));
+// Add this line in server/server.js with your other app.use() calls
+app.use("/api/simpleroutes", require("./routes/simpleRoutes"));
 // app.use('/api/routes', require('./routes/routes'));
 // app.use('/api/alerts', require('./routes/alerts'));
 // app.use('/api/admin', require('./routes/admin'));

@@ -17,6 +17,16 @@ const {
   createServiceAlert,
 } = require("../controllers/adminController");
 
+// Add this to your server/routes/admin.js file
+
+// ... other imports
+const { createSimpleRoute } = require("../controllers/simpleRoutesController");
+
+// ... other routes
+
+// Simple Route management
+router.route("/simpleroutes").post(protect, admin, createSimpleRoute);
+
 // --- All routes in this file are protected and require admin access ---
 
 // Route management
